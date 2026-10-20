@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raushan Kumar | AI & Machine Learning Engineer | SRM AP</title>
+  <meta name="description" content="Portfolio of Raushan Kumar - Computer Science & Engineering (AI & ML) at SRM University AP. Building deep learning systems, computer vision models, and intelligent full-stack applications.">
+  <meta name="keywords" content="Raushan Kumar, SRM AP, AI Engineer, Machine Learning, Deep Learning, Portfolio, Computer Vision, SRM University AP">
+  <meta name="author" content="Raushan Kumar">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Raushan Kumar — AI & ML Engineer Portfolio">
+  <meta property="og:description" content="CSE (AI & ML) at SRM AP. Explore selected works, engineering philosophy, and neural research.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Instrument Serif + Plus Jakarta Sans + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom Magnetic Cursor Follower -->
+  <div class="custom-cursor" id="customCursor" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <!-- Ambient Animated Canvas Background -->
+  <canvas id="neuralCanvas" class="neural-canvas" aria-hidden="true"></canvas>
+
+  <!-- Sticky Glassmorphic Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner container">
+      <a href="#hero" class="brand-logo" id="brandLogo" aria-label="Raushan Kumar Home">
+        <span class="logo-mark">RK</span>
+        <span class="logo-text">Raushan Kumar</span>
+        <span class="logo-tag">SRM AP</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-links" id="navLinks" aria-label="Main Navigation">
+        <a href="#philosophy" class="nav-link">Methodology</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#terminal" class="nav-link">AI Lab</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Action Buttons: Theme Toggle, Sound Toggle, CTA -->
+      <div class="header-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle dark/light theme" title="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <button id="audioToggle" class="icon-btn" aria-label="Toggle audio effects" title="UI Sound Effects">
+          <svg class="sound-on" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+          <svg class="sound-off" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+        </button>
+
+        <a href="#contact" class="btn btn-primary btn-sm header-cta" id="headerCtaBtn">
+          <span>Get in touch</span>
+          <svg viewBox="0 0 20 20" width="14" height="14" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+        </a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#philosophy" class="mobile-nav-link">Methodology</a>
+      <a href="#projects" class="mobile-nav-link">Selected Works</a>
+      <a href="#about" class="mobile-nav-link">Who Am I</a>
+      <a href="#terminal" class="mobile-nav-link">Live AI Lab</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        
+        <!-- Status Pill Badge -->
+        <div class="hero-badge animate-fade-in" style="--delay: 0.1s;">
+          <span class="status-indicator"></span>
+          <span class="badge-text">Available for AI / ML Roles & Research • SRM AP CSE (AI & ML)</span>
+        </div>
+
+        <!-- Hero Headline -->
+        <h1 class="hero-title animate-fade-in" style="--delay: 0.2s;">
+          Architecting Intelligent Systems <br>
+          <span class="title-highlight">From Neural Weights</span> to Production.
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="hero-subtitle animate-fade-in" style="--delay: 0.3s;">
+          Hi, I'm <strong class="text-contrast">Raushan Kumar</strong> — an AI & Machine Learning engineer pursuing B.Tech in CSE (AI & ML) at <span class="text-accent">SRM University AP</span>. I design high-performance deep learning models, computer vision pipelines, and intelligent generative applications.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="hero-actions animate-fade-in" style="--delay: 0.4s;">
+          <a href="#projects" class="btn btn-primary" id="heroExploreBtn">
+            <span>Explore Works</span>
+            <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor"><path fill-rule="evenodd" d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-secondary" id="heroContactBtn">
+            <span>Let's Talk</span>
+          </a>
+          <button class="btn btn-ghost" id="openResumeBtn">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            <span>Resume Brief</span>
+          </button>
+        </div>
+
+        <!-- Floating Live Tech Ticker -->
+        <div class="hero-tech-strip animate-fade-in" style="--delay: 0.5s;">
+          <span class="strip-label">Core Ecosystem:</span>
+          <div class="marquee-track">
+            <div class="marquee-content">
+              <span class="tech-tag">PyTorch</span>
+              <span class="tech-tag">TensorFlow</span>
+              <span class="tech-tag">Hugging Face</span>
+              <span class="tech-tag">Computer Vision</span>
+              <span class="tech-tag">LLMs & RAG</span>
+              <span class="tech-tag">CUDA & TensorRT</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">Next.js / React</span>
+              <span class="tech-tag">Vector DBs</span>
+              <span class="tech-tag">SRM AP Lab</span>
+            </div>
+            <!-- Duplicate for infinite seamless scroll -->
+            <div class="marquee-content" aria-hidden="true">
+              <span class="tech-tag">PyTorch</span>
+              <span class="tech-tag">TensorFlow</span>
+              <span class="tech-tag">Hugging Face</span>
+              <span class="tech-tag">Computer Vision</span>
+              <span class="tech-tag">LLMs & RAG</span>
+              <span class="tech-tag">CUDA & TensorRT</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">Next.js / React</span>
+              <span class="tech-tag">Vector DBs</span>
+              <span class="tech-tag">SRM AP Lab</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: HOW IT WORKS / METHODOLOGY (Mirroring Dribbble Reference 01, 02, 03 Card Stack) -->
+    <section class="section philosophy-section" id="philosophy">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-eyebrow">/ Engineering Methodology</span>
+          <h2 class="section-title">Here's how it works</h2>
+          <p class="section-desc">
+            Bridging fundamental machine learning mathematics with battle-tested software engineering to deliver robust, low-latency intelligent products.
+          </p>
+        </div>
+
+        <!-- Interactive 3-Card Stack with Animated SVG Connector -->
+        <div class="methodology-flow" id="methodologyFlow">
+          <!-- Animated Neon SVG Connector line -->
+          <svg class="connector-svg" viewBox="0 0 1000 240" fill="none" preserveAspectRatio="none" aria-hidden="true">
+            <path class="connector-bg" d="M 180 80 C 320 20, 360 160, 500 80 C 640 20, 680 160, 820 80" stroke="rgba(163, 230, 53, 0.2)" stroke-width="3" stroke-linecap="round"/>
+            <path class="connector-glow" d="M 180 80 C 320 20, 360 160, 500 80 C 640 20, 680 160, 820 80" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-dasharray="12 12"/>
+            <circle class="connector-node node-1" cx="180" cy="80" r="7" fill="var(--accent)"/>
+            <circle class="connector-node node-2" cx="500" cy="80" r="7" fill="var(--accent)"/>
+            <circle class="connector-node node-3" cx="820" cy="80" r="7" fill="var(--accent)"/>
+          </svg>
+
+          <div class="cards-grid">
+            
+            <!-- Card 01: Discover & Research -->
+            <div class="methodology-card tilt-card" data-step="01">
+              <div class="card-glow-pill"></div>
+              <div class="card-step-num">01</div>
+              <h3 class="card-title">Discover</h3>
+              <p class="card-body">
+                Formulating the mathematical problem, analyzing dataset distributions, mitigating bias, and defining strict empirical evaluation benchmarks.
+              </p>
+              <div class="card-tags">
+                <span class="pill-tag">Data Engineering</span>
+                <span class="pill-tag">EDA</span>
+                <span class="pill-tag">Hypothesis</span>
+              </div>
+            </div>
+
+            <!-- Card 02: Design & Architect (Highlighted center card) -->
+            <div class="methodology-card tilt-card card-featured" data-step="02">
+              <div class="card-glow-pill"></div>
+              <div class="card-step-num">02</div>
+              <h3 class="card-title">Architect</h3>
+              <p class="card-body">
+                Designing tailored neural architectures, transformer fine-tuning, loss function optimization, and scalable training loops on GPU clusters.
+              </p>
+              <div class="card-tags">
+                <span class="pill-tag">Model Architecture</span>
+                <span class="pill-tag">PyTorch</span>
+                <span class="pill-tag">Hyperopt</span>
+              </div>
+            </div>
+
+            <!-- Card 03: Deliver & Scale -->
+            <div class="methodology-card tilt-card" data-step="03">
+              <div class="card-glow-pill"></div>
+              <div class="card-step-num">03</div>
+              <h3 class="card-title">Deliver</h3>
+              <p class="card-body">
+                Model quantization (INT8/FP16), TensorRT compilation, containerized REST/gRPC endpoints, and intuitive interactive frontend dashboards.
+              </p>
+              <div class="card-tags">
+                <span class="pill-tag">TensorRT & ONNX</span>
+                <span class="pill-tag">FastAPI</span>
+                <span class="pill-tag">Production</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Testimonial Quote Cards (Mirroring Dribbble quote style) -->
+        <div class="testimonials-container">
+          <div class="testimonial-card">
+            <div class="quote-mark">“</div>
+            <p class="quote-text">
+              "Working with Raushan on neural vision models at SRM AP was seamless from start to finish. His intuition for debugging model convergence and delivering clean, well-documented inference pipelines is exceptional."
+            </p>
+            <div class="quote-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #10b981, #06b6d4);">KR</div>
+              <div class="author-info">
+                <span class="author-name">Dr. K. Ramanathan</span>
+                <span class="author-role">Faculty Mentor, Next-Gen AI Lab, SRM AP</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="quote-mark">“</div>
+            <p class="quote-text">
+              "Raushan brought our national hackathon AI prototype to life in record time. His deep knowledge of LLM agentic tool-use and vector retrieval helped us secure the top tier finish among 120+ teams."
+            </p>
+            <div class="quote-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">ST</div>
+              <div class="author-info">
+                <span class="author-name">Siddharth T.</span>
+                <span class="author-role">SRM AP Developer Student Club Lead</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: SELECTED WORKS (Mirroring Dribbble Grid) -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-eyebrow">/ Best Projects</span>
+          <h2 class="section-title">Selected Works</h2>
+          <p class="section-desc">
+            A curated showcase of artificial intelligence, computer vision, and machine learning systems engineered for real-world impact.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="project-filters" id="projectFilters" role="tablist" aria-label="Project Categories">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Works</button>
+          <button class="filter-btn" data-filter="cv" role="tab" aria-selected="false">Computer Vision</button>
+          <button class="filter-btn" data-filter="llm" role="tab" aria-selected="false">LLMs & Agents</button>
+          <button class="filter-btn" data-filter="systems" role="tab" aria-selected="false">Full-Stack AI</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projectsGrid">
+          
+          <!-- PROJECT 1: NeuroVision AI -->
+          <article class="project-card tilt-card" data-category="cv systems">
+            <div class="project-media-wrapper">
+              <img src="assets/neurovision_ui.jpg" alt="NeuroVision AI Medical Scan Diagnostics Dashboard" class="project-img" loading="lazy">
+              <div class="media-overlay">
+                <button class="quick-view-btn" data-project="neurovision">
+                  <span>Inspect System</span>
+                  <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                </button>
+              </div>
+              <span class="project-badge">96.5% Dice Metric</span>
+            </div>
+            <div class="project-info">
+              <div class="project-title-row">
+                <h3 class="project-title">NeuroVision Diagnostic AI</h3>
+                <span class="project-arrow">↗</span>
+              </div>
+              <p class="project-summary">
+                Clinical-grade automated 3D MRI segmentation and multi-class brain pathology detection using UNet++ with attention gates, trained on PyTorch with real-time sliced volumetric rendering.
+              </p>
+              <div class="project-meta">
+                <span class="tag">Computer Vision</span>
+                <span class="tag">Medical AI</span>
+                <span class="tag">PyTorch</span>
+                <span class="tag">FastAPI</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: NexusLLM Agentic Engine -->
+          <article class="project-card tilt-card" data-category="llm systems">
+            <div class="project-media-wrapper">
+              <img src="assets/nexusllm_ui.jpg" alt="NexusLLM Agentic Workflow Canvas" class="project-img" loading="lazy">
+              <div class="media-overlay">
+                <button class="quick-view-btn" data-project="nexusllm">
+                  <span>Inspect System</span>
+                  <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                </button>
+              </div>
+              <span class="project-badge">&lt;15ms Latency</span>
+            </div>
+            <div class="project-info">
+              <div class="project-title-row">
+                <h3 class="project-title">NexusLLM Agentic Engine</h3>
+                <span class="project-arrow">↗</span>
+              </div>
+              <p class="project-summary">
+                Autonomous multi-agent execution pipeline with dynamic tool synthesis, Pinecone vector search for real-time RAG, and an interactive visual node graph canvas.
+              </p>
+              <div class="project-meta">
+                <span class="tag">LLMs & Agents</span>
+                <span class="tag">RAG Pipeline</span>
+                <span class="tag">Pinecone</span>
+                <span class="tag">TypeScript</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: SynapseFlow Edge Vision (Interactive Animated Simulation Preview) -->
+          <article class="project-card tilt-card" data-category="cv">
+            <div class="project-media-wrapper mock-dynamic-wrapper" id="synapseflowCard">
+              <div class="mock-cv-screen">
+                <div class="cv-camera-header">
+                  <span class="cam-dot"></span>
+                  <span class="cam-text">FEED 01 • SRM AP QUADRANGLE</span>
+                  <span class="fps-counter" id="fpsCounter">60.2 FPS</span>
+                </div>
+                <div class="cv-detection-box box-1">
+                  <span class="box-label">Student: 98.4%</span>
+                </div>
+                <div class="cv-detection-box box-2">
+                  <span class="box-label">Autonomous Rover: 99.1%</span>
+                </div>
+                <div class="cv-radar-grid"></div>
+              </div>
+              <div class="media-overlay">
+                <button class="quick-view-btn" data-project="synapseflow">
+                  <span>Inspect System</span>
+                  <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                </button>
+              </div>
+              <span class="project-badge">Edge Optimized</span>
+            </div>
+            <div class="project-info">
+              <div class="project-title-row">
+                <h3 class="project-title">SynapseFlow Edge Analytics</h3>
+                <span class="project-arrow">↗</span>
+              </div>
+              <p class="project-summary">
+                Sub-millisecond multi-camera object detection and tracking pipeline utilizing YOLOv9 and DeepSORT with custom TensorRT calibration for Jetson Orin embedded hardware.
+              </p>
+              <div class="project-meta">
+                <span class="tag">Edge AI</span>
+                <span class="tag">YOLOv9</span>
+                <span class="tag">TensorRT</span>
+                <span class="tag">CUDA</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 4: SRM CampusRover Autonomous Navigation -->
+          <article class="project-card tilt-card" data-category="systems">
+            <div class="project-media-wrapper mock-dynamic-wrapper" id="campusRoverCard">
+              <div class="mock-nav-screen">
+                <div class="lidar-sweep"></div>
+                <div class="nav-path-line"></div>
+                <div class="nav-target-dot"></div>
+                <div class="telemetry-box">
+                  <div>LATENCY: <strong>4.2ms</strong></div>
+                  <div>SLAM: <strong>CONVERGED</strong></div>
+                  <div>ODOM: <strong>0.84 m/s</strong></div>
+                </div>
+              </div>
+              <div class="media-overlay">
+                <button class="quick-view-btn" data-project="campusrover">
+                  <span>Inspect System</span>
+                  <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                </button>
+              </div>
+              <span class="project-badge">ROS2 & LiDAR</span>
+            </div>
+            <div class="project-info">
+              <div class="project-title-row">
+                <h3 class="project-title">SRMAP CampusRover NavAI</h3>
+                <span class="project-arrow">↗</span>
+              </div>
+              <p class="project-summary">
+                Autonomous delivery robot navigation system engineered at SRM University AP. Integrates 2D/3D LiDAR SLAM, dynamic obstacle avoidance, and A* path planning via ROS2 Humble.
+              </p>
+              <div class="project-meta">
+                <span class="tag">Robotics</span>
+                <span class="tag">ROS2</span>
+                <span class="tag">SLAM</span>
+                <span class="tag">C++ / Python</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: LIVE AI PLAYGROUND / NEURAL BENCHMARK SIMULATOR -->
+    <section class="section terminal-section" id="terminal">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">/ Interactive Experience</span>
+          <h2 class="section-title">Live AI Inference Lab</h2>
+          <p class="section-desc">
+            Interact with Raushan's simulated model inference pipeline right in the browser. Test token throughput, benchmark latency, and inspect model architecture telemetry.
+          </p>
+        </div>
+
+        <div class="terminal-container">
+          <div class="terminal-chrome">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="terminal-title">raushan-ai-runtime v3.4 — cuda-enabled [SRM-AP-NODE-01]</div>
+            <div class="terminal-status"><span class="pulse-indicator"></span> ONLINE</div>
+          </div>
+
+          <div class="terminal-content">
+            <!-- Left: Model Controls & Live Visualizer -->
+            <div class="terminal-left">
+              <div class="model-select-group">
+                <label for="modelSelect">Target Architecture:</label>
+                <select id="modelSelect" class="styled-select">
+                  <option value="neurovision">UNet++ Attention ResNet (Vision)</option>
+                  <option value="nexusllm" selected>Nexus-7B Quantized RAG (Agent)</option>
+                  <option value="yolov9">YOLOv9-Edge TensorRT (Realtime)</option>
+                </select>
+              </div>
+
+              <!-- Interactive Neural Weight Matrix Waveform -->
+              <div class="neural-viz-box">
+                <div class="viz-header">
+                  <span>Activation Energy Waveform</span>
+                  <span id="vizStatus">Streaming...</span>
+                </div>
+                <canvas id="waveformCanvas" width="480" height="120"></canvas>
+              </div>
+
+              <!-- Benchmark Execution Buttons -->
+              <div class="benchmark-actions">
+                <button class="btn btn-primary btn-sm" id="runInferenceBtn">
+                  <span>Run Inference Benchmark</span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                </button>
+                <button class="btn btn-secondary btn-sm" id="clearTerminalBtn">Clear Logs</button>
+              </div>
+            </div>
+
+            <!-- Right: Live Log Feed & Telemetry -->
+            <div class="terminal-right">
+              <div class="telemetry-pills">
+                <div class="telemetry-card">
+                  <span class="telem-label">Inference Latency</span>
+                  <span class="telem-val" id="telemLatency">14.8 ms</span>
+                </div>
+                <div class="telemetry-card">
+                  <span class="telem-label">GPU Memory</span>
+                  <span class="telem-val" id="telemVRAM">2.1 / 16 GB</span>
+                </div>
+                <div class="telemetry-card">
+                  <span class="telem-label">Throughput</span>
+                  <span class="telem-val" id="telemThroughput">184 tokens/s</span>
+                </div>
+              </div>
+
+              <div class="console-output" id="consoleOutput">
+                <div class="log-line text-muted">[INIT] Initializing TensorRT execution engine on CUDA device 0...</div>
+                <div class="log-line text-accent">[READY] Weights loaded into unified memory. Ready for interactive inference.</div>
+                <div class="log-line text-info">&gt; Select a model architecture and click "Run Inference Benchmark" to execute live simulation.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: WHO AM I / PUSHING BOUNDARIES (Mirroring Dribbble Section) -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-eyebrow">/ Who Am I</span>
+          <h2 class="section-title">Pushing Boundaries <span class="serif-accent">in AI & ML</span></h2>
+        </div>
+
+        <div class="about-grid">
+          
+          <!-- Left Column: Portrait & Social Connections -->
+          <div class="about-card-left">
+            <div class="portrait-wrapper">
+              <img src="assets/raushan_portrait.jpg" alt="Raushan Kumar — AI and ML Engineer at SRM AP" class="portrait-img">
+              <div class="portrait-badge">
+                <span class="badge-dot"></span>
+                <span>SRM University AP</span>
+              </div>
+            </div>
+
+            <div class="about-id-card">
+              <div class="id-name">Raushan Kumar</div>
+              <div class="id-role">AI/ML Engineer & Researcher</div>
+              
+              <!-- Social Icons (Mirroring reference: X, LinkedIn, GitHub, Mail) -->
+              <div class="about-socials">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile" title="GitHub">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile" title="LinkedIn">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0 0-3.28 1.64 1.64 0 0 0 0 3.28m1.4 9.74v-8.37H5.06v8.37z"/></svg>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X Profile" title="X (Twitter)">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="mailto:raushan_kumar@srmap.edu.in" class="social-icon" aria-label="Send Email" title="Email Raushan">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Narrative & Career Timeline (Matching reference layout) -->
+          <div class="about-card-right">
+            <div class="bio-text">
+              <p>
+                I am a Computer Science & Engineering undergraduate at <strong>SRM University AP</strong>, specializing in Artificial Intelligence & Machine Learning. My work centers on the intersection of deep neural networks, computational optimization, and product engineering.
+              </p>
+              <p>
+                From building 3D biomedical imaging segmentation models to designing autonomous agent orchestration systems, I love solving hard algorithmic problems and shipping tools that feel magical to use.
+              </p>
+            </div>
+
+            <!-- Experience & Milestones Table (Exact format as reference) -->
+            <div class="experience-list">
+              
+              <div class="exp-row">
+                <div class="exp-role">AI Research Fellow</div>
+                <div class="exp-org">Next-Gen Computing Lab, SRM AP</div>
+                <div class="exp-period">2024 <span class="arrow-glyph">→</span> Now</div>
+              </div>
+
+              <div class="exp-row">
+                <div class="exp-role">Machine Learning Lead</div>
+                <div class="exp-org">Developer Student Club, SRM AP</div>
+                <div class="exp-period">2023 <span class="arrow-glyph">→</span> 2024</div>
+              </div>
+
+              <div class="exp-row">
+                <div class="exp-role">Autonomous Systems Lead</div>
+                <div class="exp-org">SRM AP Robotics Club</div>
+                <div class="exp-period">2023 <span class="arrow-glyph">→</span> 2024</div>
+              </div>
+
+              <div class="exp-row">
+                <div class="exp-role">B.Tech in CSE (AI & ML)</div>
+                <div class="exp-org">SRM University Andhra Pradesh</div>
+                <div class="exp-period">2022 <span class="arrow-glyph">→</span> 2026</div>
+              </div>
+
+            </div>
+
+            <!-- Key Quantitative Achievements -->
+            <div class="stats-row">
+              <div class="stat-item">
+                <div class="stat-number" data-target="96.5">0</div>
+                <div class="stat-label">% Peak Model Accuracy</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number" data-target="15">0</div>
+                <div class="stat-label">+ Production ML Models</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number" data-target="800">0</div>
+                <div class="stat-label">+ Git Commits & PRs</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number" data-target="3">0</div>
+                <div class="stat-label">National Hackathon Wins</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6: "LET'S MAKE IT HAPPEN" BANNER CARD (Directly mirroring the Dribbble glowing lime card) -->
+    <section class="section cta-banner-section">
+      <div class="container">
+        
+        <div class="cta-banner-card">
+          <div class="banner-glow-gradient"></div>
+          <div class="banner-content">
+            <h2 class="banner-title">Let’s Make It Happen</h2>
+            <p class="banner-subtitle">
+              Always open to research opportunities, high-performance AI engineering internships, and ambitious collaborations. Let's work together to bring your ideas to life.
+            </p>
+            <a href="#contact" class="btn btn-dark-pill" id="bannerCtaBtn">
+              <span>Get In Touch</span>
+              <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 7: INTERACTIVE CONTACT -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-eyebrow">/ Get In Touch</span>
+          <h2 class="section-title">Start a Conversation</h2>
+          <p class="section-desc">
+            Have an AI project, research idea, or role opening? Drop a message or copy my direct email.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Details Card -->
+          <div class="contact-info-card">
+            <h3>Direct Contact</h3>
+            <p>I typically reply within a few hours. Looking forward to discussing exciting AI frontiers.</p>
+            
+            <div class="copy-email-box">
+              <span class="email-text" id="emailToCopy">raushan_kumar@srmap.edu.in</span>
+              <button class="copy-btn" id="copyEmailBtn" aria-label="Copy email to clipboard">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <span id="copyBtnText">Copy</span>
+              </button>
+            </div>
+
+            <div class="contact-meta-list">
+              <div class="meta-item">
+                <span class="meta-icon">📍</span>
+                <div>
+                  <strong>Location</strong>
+                  <div>SRM University AP, Amaravati, India</div>
+                </div>
+              </div>
+              <div class="meta-item">
+                <span class="meta-icon">🎓</span>
+                <div>
+                  <strong>Affiliation</strong>
+                  <div>Dept. of Computer Science & Engineering (AI & ML)</div>
+                </div>
+              </div>
+              <div class="meta-item">
+                <span class="meta-icon">⚡</span>
+                <div>
+                  <strong>Primary Interests</strong>
+                  <div>Deep Learning, Computer Vision, Autonomous Agents</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Message Form -->
+          <div class="contact-form-card">
+            <form id="contactForm" class="styled-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="senderName">Your Name</label>
+                  <input type="text" id="senderName" class="form-control" placeholder="e.g. Elena Vance" required>
+                  <span class="form-error" id="nameError">Please enter your name</span>
+                </div>
+                <div class="form-group">
+                  <label for="senderEmail">Email Address</label>
+                  <input type="email" id="senderEmail" class="form-control" placeholder="elena@domain.com" required>
+                  <span class="form-error" id="emailError">Please enter a valid email</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="projectType">Inquiry Topic</label>
+                <select id="projectType" class="form-control">
+                  <option value="internship">AI / ML Engineering Role / Internship</option>
+                  <option value="research">Research Collaboration & Paper</option>
+                  <option value="freelance">Custom ML Pipeline or Full-Stack AI Project</option>
+                  <option value="general">General Networking / Coffee Chat</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="senderMessage">Message</label>
+                <textarea id="senderMessage" class="form-control" rows="4" placeholder="Tell me about your project, timeline, or requirements..." required></textarea>
+                <span class="form-error" id="messageError">Please enter your message</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="formSubmitBtn">
+                <span>Send Message</span>
+                <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/></svg>
+              </button>
+
+              <div class="form-status" id="formStatus" aria-live="polite"></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER WITH MASSIVE EDITORIAL SIGNATURE (Matching Dribbble "Elian Ross" signature) -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      
+      <div class="footer-nav-row">
+        <div class="footer-links">
+          <a href="#hero">Home</a>
+          <a href="#philosophy">Methodology</a>
+          <a href="#projects">Works</a>
+          <a href="#about">About</a>
+          <a href="#terminal">AI Lab</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-copy">
+          © <span id="currentYear">2026</span> Raushan Kumar. SRM AP. All rights reserved.
+        </div>
+      </div>
+
+      <!-- Giant Editorial Typographic Signature -->
+      <div class="giant-name-wrapper" aria-hidden="true">
+        <h2 class="giant-signature">Raushan Kumar</h2>
+      </div>
+
+      <!-- Footer Subline -->
+      <div class="footer-bottom-statement">
+        <p class="tagline">Open and excited for new research & engineering projects.</p>
+        <p class="sub-tagline">
+          Get in touch with me — send an email or reach out on <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a> 🚀
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- PROJECT DEEP-DIVE MODAL -->
+  <dialog id="projectModal" class="project-modal" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close dialog">✕</button>
+      <div class="modal-body" id="modalBody">
+        <!-- Injected dynamically via JS -->
+      </div>
+    </div>
+  </dialog>
+
+  <!-- RESUME BRIEF MODAL -->
+  <dialog id="resumeModal" class="project-modal" aria-labelledby="resumeTitle">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="resumeCloseBtn" aria-label="Close dialog">✕</button>
+      <div class="modal-body">
+        <div class="resume-header">
+          <h2 id="resumeTitle">Raushan Kumar — Resume Brief</h2>
+          <span class="resume-subtitle">B.Tech in Computer Science & Engineering (AI & ML) • SRM University AP</span>
+        </div>
+        <div class="resume-content-grid">
+          <div class="resume-section">
+            <h3>Core Competencies</h3>
+            <ul class="resume-bullet-list">
+              <li><strong>Deep Learning & AI:</strong> PyTorch, TensorFlow, Hugging Face, Transformers, CNNs, UNet, LoRA fine-tuning.</li>
+              <li><strong>Computer Vision:</strong> OpenCV, YOLOv8/v9, DeepSORT, Segmentation, Feature Extraction, Medical Imaging.</li>
+              <li><strong>GenAI & Agents:</strong> Vector Databases (Pinecone, Chroma), LangChain, LlamaIndex, RAG pipelines, Prompt Eng.</li>
+              <li><strong>Deployment & Systems:</strong> FastAPI, Docker, CUDA, TensorRT, ONNX, Git, Linux, C++, Python, TypeScript.</li>
+            </ul>
+          </div>
+          <div class="resume-section">
+            <h3>Education</h3>
+            <p><strong>SRM University Andhra Pradesh</strong> — B.Tech in CSE (Artificial Intelligence & Machine Learning), 2022 – 2026</p>
+            <p>Relevant Coursework: Neural Networks & Deep Learning, Linear Algebra for ML, Probability & Statistics, Data Structures & Algorithms, Computer Vision, Natural Language Processing.</p>
+          </div>
+          <div class="resume-section">
+            <h3>Honors & Achievements</h3>
+            <ul class="resume-bullet-list">
+              <li>Finalist / Winner in National AI Hackathons.</li>
+              <li>Published open source AI models with high community engagement.</li>
+              <li>Lead organizer of SRM AP AI & Machine Learning student bootcamps.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="resume-footer-actions">
+          <a href="mailto:raushan_kumar@srmap.edu.in?subject=Requesting%20Full%20Resume%20-%20Raushan%20Kumar" class="btn btn-primary">
+            Request Full PDF Resume
+          </a>
+          <button class="btn btn-secondary" id="closeResumeBottomBtn">Close</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
