@@ -1,5 +1,5 @@
 /**
- * RAUSHAN KUMAR — PORTFOLIO INTERACTION ENGINE
+ * AAYUSH KUMAR — PORTFOLIO INTERACTION ENGINE
  * Rich animations, neural canvas, 3D tilt, audio synthesis, live AI lab
  */
 
@@ -491,7 +491,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Integrated automated anomaly detection and radiology trend telemetry for diagnostic support.',
         'Deployed with FastAPI and TensorRT ONNX export for sub-20ms inference times.'
       ],
-      github: 'https://github.com',
+      github: 'https://github.com/Aayush-9849',
       demo: '#hero'
     },
     nexusllm: {
@@ -506,7 +506,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Sandboxed code execution block with real-time streaming output and intermediate variable inspection.',
         'Dynamic prompt evaluation and automated regression testing across multiple foundation models.'
       ],
-      github: 'https://github.com',
+      github: 'https://github.com/Aayush-9849',
       demo: '#hero'
     },
     synapseflow: {
@@ -521,7 +521,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'DeepSORT tracking algorithm tuned with custom Kalman filters to eliminate identity switching in occlusions.',
         'Built for smart campus safety monitoring and automated density heatmaps at SRM University AP.'
       ],
-      github: 'https://github.com',
+      github: 'https://github.com/Aayush-9849 ',
       demo: '#hero'
     },
     campusrover: {
@@ -536,7 +536,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Custom local path planner utilizing Model Predictive Control (MPC) and dynamic window approach.',
         'Over 50 kilometers of successful autonomous test navigations conducted on SRM AP campus grounds.'
       ],
-      github: 'https://github.com',
+      github: 'https://github.com/Aayush-9849',
       demo: '#hero'
     }
   };
@@ -702,7 +702,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       setTimeout(() => {
         formStatus.className = 'form-status success';
-        formStatus.textContent = '✓ Message received! Raushan will get back to you shortly.';
+        formStatus.textContent = '✓ Message received! Aayush will get back to you shortly.';
         contactForm.reset();
         formSubmitBtn.disabled = false;
         formSubmitBtn.innerHTML = `<span>Send Message</span> <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/></svg>`;
